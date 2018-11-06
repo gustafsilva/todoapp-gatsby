@@ -6,7 +6,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "gatsby": "^2.0.33",
@@ -16,7 +17,15 @@
     "react-dom": "^16.5.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "bulma": "^0.7.2",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.2.2"
   }
