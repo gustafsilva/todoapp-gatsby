@@ -17,7 +17,7 @@ class TodoApp extends Component {
   }
 
   setNewTask(event) {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       this.addTask();
     }
     else {
