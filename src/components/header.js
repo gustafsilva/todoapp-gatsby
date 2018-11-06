@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { siteMetadata } from "../../gatsby-config";
+import React, { Component } from 'react'
+import { siteMetadata } from '../../gatsby-config'
 
-class Header extends Component {
-  render() {
-    const { title, description } = siteMetadata;
+export default class Header extends Component {
+  render () {
+    const { title, description } = siteMetadata
 
     return (
       <section className="hero is-info">
@@ -14,8 +14,6 @@ class Header extends Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
-
-export default Header;

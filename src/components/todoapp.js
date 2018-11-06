@@ -1,71 +1,76 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import Task from "./task";
+import Task from './task'
 
-
-class TodoApp extends Component {
-  constructor(props) {
-    super(props);
+export default class TodoApp extends Component {
+  constructor (props) {
+    super(props)
 
     this.state = {
-      newTask: "",
+      newTask: '',
       tasks: []
-    };
+    }
 
-    this.setNewTask = this.setNewTask.bind(this);
-    this.addTask = this.addTask.bind(this);
+    this.setNewTask = this.setNewTask.bind(this)
+    this.addTask = this.addTask.bind(this)
   }
 
-  setNewTask(event) {
-    if (event.key === "Enter") {
-      this.addTask();
-    }
-    else {
+  setNewTask (event) {
+    if (event.key === 'Enter') {
+      this.addTask()
+    } else {
       this.setState({
         ...this.state,
         newTask: event.target.value
-      });
+      })
     }
   }
 
-  addTask() {
-    const { newTask } = this.state;
-    let { tasks } = this.state;
+  addTask () {
+    const { newTask } = this.state
+    let { tasks } = this.state
 
-    if(newTask !== "") {
+    if (newTask !== '') {
       const task = {
         description: this.state.newTask,
         status: false
       }
-      tasks.push(task);
-  
+      tasks.push(task)
+
       this.setState({
-        newTask: "",
+        newTask: '',
         tasks
-      });
+      })
     }
   }
 
-  renderTasks() {
-    const { tasks } = this.state;
+  renderTasks () {
+    const { tasks } = this.state
 
-    const tasksRendered = tasks.map((task) => {
+    const tasksRendered = tasks.map(task => {
       return (
         <Task description={task.description} status={tasks.status} />
       )
-    });
+    })
 
     return (
       tasksRendered
-    );
+    )
   }
 
-  render() {
+  render () {
     return (
       <div className="todoapp content">
         <div className="new-task form field has-addons">
           <div className="control">
-            <input className="input" type="text" placeholder="Add new task" value={this.state.newTask} onChange={this.setNewTask} onKeyPress={this.setNewTask}></input>
+            <input
+              className="input"
+              type="text"
+              placeholder="Add new task"
+              value={this.state.newTask}
+              onChange={this.setNewTask}
+              onKeyPress={this.setNewTask}
+            />
           </div>
           <div className="control">
             <button className="button is-success" onClick={this.addTask}>Add</button>
@@ -76,8 +81,6 @@ class TodoApp extends Component {
           {this.renderTasks()}
         </div>
       </div>
-    );
+    )
   }
 }
-
-export default TodoApp;
