@@ -7,7 +7,7 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "lint": "eslint . --ext .js",
+    "lint": "eslint test/**/*.js src/**/*.js --ext js",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "test": "jest",
     "test:watch": "npm test -- --watch"
