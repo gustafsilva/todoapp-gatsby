@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 
 import Task from './task'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-export default class TodoApp extends Component {
+import * as taskActions from '../containers/actions/tasks'
+
+class TodoApp extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
       newTask: '',
-      tasks: []
     }
 
     this.setNewTask = this.setNewTask.bind(this)
@@ -28,34 +31,14 @@ export default class TodoApp extends Component {
 
   addTask () {
     const { newTask } = this.state
-    let { tasks } = this.state
 
     if (newTask !== '') {
-      const task = {
-        description: this.state.newTask,
-        status: false
-      }
-      tasks.push(task)
+      this.props.addTask(newTask)
 
       this.setState({
         newTask: '',
-        tasks
       })
     }
-  }
-
-  renderTasks () {
-    const { tasks } = this.state
-
-    const tasksRendered = tasks.map(task => {
-      return (
-        <Task description={task.description} status={tasks.status} />
-      )
-    })
-
-    return (
-      tasksRendered
-    )
   }
 
   render () {
@@ -78,9 +61,22 @@ export default class TodoApp extends Component {
         </div>
 
         <div className="tasks field is-grouped is-grouped-multiline">
-          {this.renderTasks()}
+          {
+            this.props.tasks.map(task => (
+              <Task key={task.id} id={task.id} description={task.description} status={task.status} />
+            ))
+          }
         </div>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  tasks: state.tasks
+})
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(taskActions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoApp)
