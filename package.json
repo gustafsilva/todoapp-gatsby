@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "todoapp-gatsby",
+  "description": "Simple App with React and Gatsby",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
