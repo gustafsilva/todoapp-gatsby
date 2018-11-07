@@ -1,0 +1,19 @@
+# References: https://github.com/humphd/learn-travis
+# 1. We don't need to use `sudo`, and can instead use containers for faster builds
+sudo: false
+# 2. This is a node.js JS project
+language: node_js
+# 3. These are the various versions of node.js we want to test against
+node_js:
+  - "10"
+  - "node"
+# 4. We'd like to cache our node_modules dir, because it won't change very often
+cache:
+  directories:
+    - "node_modules"
+# References: https://github.com/Ethan-Arrowood/harperdb-connect/blob/master/.travis.yml
+jobs:
+  include:
+    - stage: Produce Coverage
+      node_js: node
+      script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
