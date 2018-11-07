@@ -1,5 +1,8 @@
 # TodoApp Gatsby
+[![Coverage Status](https://coveralls.io/repos/github/gustafsilva/todoapp-gatsby/badge.svg?branch=feature-tests)](https://coveralls.io/github/gustafsilva/todoapp-gatsby?branch=feature-tests)
+
 Simple application using Gatsby, React, Redux and Bulma.
+
 
 ## Getting Started :rocket:
 First we'll clone the project:
