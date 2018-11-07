@@ -38,4 +38,61 @@ describe('tasks reducer', () => {
       }
     ])
   })
+
+  it('should handle ADD_TASK void', () => {
+    const initState = []
+    const newTask = actions.addTask('')
+
+    expect(reducer(initState, newTask)).toEqual([])
+  })
+
+  it('should handle CHANGE_TASK_STATUS', () => {
+    const initState = [
+      {
+        id: Math.random(),
+        description: 'make coffe',
+        status: false
+      },
+      {
+        id: Math.random(),
+        description: 'make code',
+        status: true
+      },
+      {
+        id: Math.random(),
+        description: 'learn test',
+        status: false
+      }
+    ]
+    const taskChange = initState[0]
+    let changeState = actions.changeTaskStatus(taskChange.id)
+
+    let expectedStore = initState
+    expectedStore[0].status = !taskChange.status
+
+    expect(reducer(initState, changeState)).toEqual(expectedStore)
+  })
+
+  it('should handle CHANGE_TASK_STATUS incorrect id task', () => {
+    const initState = [
+      {
+        id: Math.random(),
+        description: 'make coffe',
+        status: false
+      },
+      {
+        id: Math.random(),
+        description: 'make code',
+        status: true
+      },
+      {
+        id: Math.random(),
+        description: 'learn test',
+        status: false
+      }
+    ]
+    let changeState = actions.changeTaskStatus(Math.random())
+
+    expect(reducer(initState, changeState)).toEqual(initState)
+  })
 })
