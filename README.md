@@ -1,12 +1,29 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# TodoApp Gatsby
+Simple application using Gatsby, React, Redux and Bulma.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+## Getting Started :rocket:
+First we'll clone the project:
+```shell
+$ git clone https://github.com/gustafsilva/todoapp-gatsby.git
 ```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
+
+Open the project and install node dependencies:
+```shell
+$ cd todoapp-gatsby
+$ npm install
 ```
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+Start the local server
+```shell
+$ npm start
+```
 
-## Running in development
-`gatsby develop`
+## Dependencies
+* [Node](https://nodejs.org/en/)
+* [Gatsby](https://www.gatsbyjs.org/)
+* [React](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
+* [Bulma](https://bulma.io/)
+
+## Licence
+The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/todoapp-gatsby/blob/master/LICENSE).
