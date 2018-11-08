@@ -3,30 +3,14 @@ name: Bug Report 🐞
 about: Something isn't working as expected? Here is the right place to report.
 ---
 
-<!--
-  Please fill out each section below, otherwise your issue will be closed. This info allows Gatsby maintainers to diagnose (and fix!) your issue as quickly as possible.
-
-  Useful Links:
-  - Documentation: https://www.gatsbyjs.org/docs/
-  - How to File an Issue: https://www.gatsbyjs.org/docs/how-to-file-an-issue/
-
-  Before opening a new issue, please search existing issues: https://github.com/gatsbyjs/gatsby/issues
--->
-
 ## Description
-
-Describe the issue that you're seeing.
+_Describe the issue that you're seeing._
 
 ### Steps to reproduce
-
-Clear steps describing how to reproduce the issue. Please please please link to a demo project if possible, this makes your issue _much_ easier to diagnose (seriously).
+_Clear steps describing how to reproduce the issue. Please please please link to a demo project if possible, this makes your issue much easier to diagnose (seriously)_
 
 ### Expected result
-
-What should happen?
+_What should happen?_
 
 ### Actual result
-
-What happened.
-
-### Environment
+_What happened._
