@@ -7,11 +7,11 @@ export default class Footer extends Component {
       <footer className="footer">
         <div className="content">
           <p>
-            <a className={ 'icon' } href="www.github.com.br/gustafsilva/todoapp-gatsby"><FaGithub />
+            <a className={ 'icon' } href="https://www.github.com/gustafsilva/todoapp-gatsby"><FaGithub />
 
-            </a><strong>TodoApp</strong> by <a href="www.github.com/gustafsilva">Gustavo F. Silva</a>.
+            </a><strong>TodoApp</strong> by <a href="https://www.github.com/gustafsilva">Gustavo F. Silva</a>.
 
-            The source code is licensed<a href="https://github.com/gustafsilva/todoapp-gatsby/blob/feature-remove-warnings/LICENSE"> MIT</a>
+            The source code is licensed<a href="https://github.com/gustafsilva/todoapp-gatsby/blob/master/LICENSE"> MIT</a>
             <i className="icon has-text-danger"><FaHeart /></i>
           </p>
         </div>

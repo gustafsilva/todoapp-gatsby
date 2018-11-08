@@ -19,7 +19,7 @@ class Task extends Component {
     let button
 
     if (this.props.status) {
-      button = <a className="button is-success" href="#"><strike>{this.props.description}</strike></a>
+      button = <a className="button is-danger" href="#"><strike>{this.props.description}</strike></a>
     } else {
       button = <a className="button" href="#">{this.props.description}</a>
     }
