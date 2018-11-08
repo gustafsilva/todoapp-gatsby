@@ -4,7 +4,7 @@ module.exports = {
     description: 'Simple App with React and Gatsby',
     author: 'Gustavo F. Silva',
   },
-  pathPrefix: '/',
+  pathPrefix: '/todoapp-gatsby',
   plugins: [
     'gatsby-plugin-sass',
   ]
